@@ -5,9 +5,6 @@ import SimpleLightbox from "simplelightbox";
 // Додатковий імпорт стилів
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-console.log(galleryItems);
-
-
 const gallery = document.querySelector('.gallery');
 
 gallery.insertAdjacentHTML('beforeend', galleryItems
@@ -24,3 +21,5 @@ const lightbox = new SimpleLightbox('.gallery a', {
     captionDelay: 250,
     captionPosition: 'bottom',
 });
+
+
