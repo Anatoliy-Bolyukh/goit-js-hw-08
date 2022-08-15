@@ -20,15 +20,19 @@ function getObj() {
         messageEl.value = newObj.message
 
     }
+    obj = newObj
 }
 getObj()
 
 form.addEventListener("submit", (event => {
     event.preventDefault();
-    if (emailEl.value.trim() !== "" && messageEl.value.trim() !== "") {
+
+    if (emailEl.value.trim() && messageEl.value.trim()) {
+
         console.log(obj);
         form.reset();
 
-        localStorage.removeItem("feedback-form-state")
+        localStorage.removeItem("feedback-form-state");
+
     }
 }))

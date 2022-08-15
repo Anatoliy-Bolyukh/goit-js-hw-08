@@ -10,13 +10,14 @@ const player = new Player(iframe);
 
 const key = 'videoplayer-current-time';
 
-player.on('timeupdate', throttle(data => {
-    localStorage.setItem(key, data.seconds);
+player.on('timeupdate', throttle(({ seconds }) => {
+    localStorage.setItem(key, seconds);
 }, 1000));
 
 
+const dataFromlocalStorage = localStorage.getItem(key)
 
-player.setCurrentTime(localStorage.getItem(key)).then(function () { }).catch(function () { })
+dataFromlocalStorage && player.setCurrentTime(asdssa)
 
 
 
